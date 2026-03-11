@@ -15,11 +15,19 @@ body {
   min-height: 100vh;
   padding: 16px;
 }
+@media (min-width: 768px) {
+  .page-bg { padding: 20px; }
+}
 
 /* ── Max-width containers ──────────────────────────────── */
 .container-sm { max-width: 680px; margin: 0 auto; }
 .container-md { max-width: 800px; margin: 0 auto; }
 .container-lg { max-width: 900px; margin: 0 auto; padding: 0 12px; }
+@media (min-width: 768px) {
+  .container-sm { max-width: 720px; }
+  .container-md { max-width: 880px; }
+  .container-lg { max-width: 960px; padding: 0 16px; }
+}
 
 /* ── Card ──────────────────────────────────────────────── */
 .card {
@@ -33,6 +41,9 @@ body {
 @media (min-width: 480px) {
   .card { padding: 20px 24px; }
 }
+@media (min-width: 768px) {
+  .card { padding: 24px 28px; margin-bottom: 18px; }
+}
 
 /* ── Section heading ───────────────────────────────────── */
 .section-head {
@@ -42,6 +53,9 @@ body {
   color: #1a3a2a;
   border-bottom: 2px solid #e8dfc8;
   padding-bottom: 8px;
+}
+@media (min-width: 768px) {
+  .section-head { font-size: 16px; margin-bottom: 18px; padding-bottom: 10px; }
 }
 
 /* ── Buttons ───────────────────────────────────────────── */
@@ -57,6 +71,10 @@ body {
   font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
+  min-height: 36px;
+}
+@media (min-width: 768px) {
+  .btn { padding: 10px 16px; min-height: 40px; font-size: 14px; }
 }
 .btn-dark  { background: #1a3a2a; color: #c9a84c; }
 .btn-brown { background: #6b5c3e; color: #fff; }
@@ -73,6 +91,11 @@ body {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
+  min-height: 32px;
+  min-width: 32px;
+}
+@media (min-width: 768px) {
+  .icon-btn { min-height: 36px; min-width: 36px; }
 }
 
 /* ── Inputs ────────────────────────────────────────────── */
@@ -86,6 +109,10 @@ body {
   background: #fffef9;
   outline: none;
   box-sizing: border-box;
+  min-height: 36px;
+}
+@media (min-width: 768px) {
+  .inp { padding: 10px 12px; min-height: 40px; font-size: 14px; }
 }
 label.lbl {
   font-size: 11px;
@@ -95,6 +122,9 @@ label.lbl {
   text-transform: uppercase;
   margin-bottom: 4px;
   display: block;
+}
+@media (min-width: 768px) {
+  label.lbl { font-size: 12px; margin-bottom: 6px; }
 }
 
 /* ── Top bar (navigation header) ──────────────────────── */
@@ -115,6 +145,10 @@ label.lbl {
 @media (min-width: 480px) {
   .topbar-title { font-size: 20px; }
 }
+@media (min-width: 768px) {
+  .topbar-title { font-size: 22px; }
+  .topbar-row { margin-bottom: 24px; gap: 12px; }
+}
 
 /* ── Settings tabs ─────────────────────────────────────── */
 .settings-tabs {
@@ -126,6 +160,9 @@ label.lbl {
   padding: 6px;
   border: 1px solid #e8dfc8;
   overflow-x: auto;
+}
+@media (min-width: 768px) {
+  .settings-tabs { gap: 6px; margin-bottom: 18px; padding: 8px; }
 }
 .settings-tab {
   flex: 1;
@@ -146,6 +183,9 @@ label.lbl {
 @media (min-width: 400px) {
   .settings-tab { font-size: 13px; gap: 6px; }
 }
+@media (min-width: 768px) {
+  .settings-tab { font-size: 14px; padding: 10px 8px; }
+}
 
 /* ── Color row ─────────────────────────────────────────── */
 .color-row {
@@ -153,6 +193,9 @@ label.lbl {
   align-items: center;
   gap: 12px;
   margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+  .color-row { gap: 14px; margin-bottom: 16px; }
 }
 
 /* ── Dashboard navbar ──────────────────────────────────── */
@@ -170,6 +213,9 @@ label.lbl {
 @media (min-width: 640px) {
   .dash-nav { padding: 0 28px; }
 }
+@media (min-width: 768px) {
+  .dash-nav { padding: 0 32px; gap: 18px; }
+}
 
 .dash-nav-title {
   flex: 1;
@@ -185,11 +231,17 @@ label.lbl {
 @media (min-width: 480px) {
   .dash-nav-brand { font-size: 20px; }
 }
+@media (min-width: 768px) {
+  .dash-nav-brand { font-size: 22px; }
+}
 .dash-nav-sub {
   margin: 0;
   font-size: 11px;
   opacity: 0.8;
   color: #a0c8b0;
+}
+@media (min-width: 768px) {
+  .dash-nav-sub { font-size: 12px; }
 }
 .dash-nav-actions {
   display: flex;
@@ -197,6 +249,9 @@ label.lbl {
   align-items: center;
   flex-shrink: 0;
   padding: 10px 0;
+}
+@media (min-width: 768px) {
+  .dash-nav-actions { gap: 10px; }
 }
 
 /* ── Dashboard invoice list ────────────────────────────── */
@@ -215,6 +270,9 @@ label.lbl {
 @media (min-width: 480px) {
   .inv-card { padding: 14px 18px; gap: 14px; flex-wrap: nowrap; }
 }
+@media (min-width: 768px) {
+  .inv-card { padding: 16px 20px; gap: 16px; }
+}
 .inv-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.13); }
 
 .inv-icon {
@@ -225,6 +283,9 @@ label.lbl {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .inv-icon { width: 48px; height: 48px; }
 }
 .inv-info { flex: 1; cursor: pointer; min-width: 0; }
 .inv-name {
@@ -238,14 +299,29 @@ label.lbl {
 @media (min-width: 480px) {
   .inv-name { font-size: 15px; }
 }
+@media (min-width: 768px) {
+  .inv-name { font-size: 16px; }
+}
 .inv-meta { font-size: 12px; color: #888; margin-top: 2px; }
+@media (min-width: 768px) {
+  .inv-meta { font-size: 13px; }
+}
 .inv-amount { text-align: right; flex-shrink: 0; }
 .inv-total { font-weight: 700; font-size: 15px; color: #1a3a2a; }
 @media (min-width: 480px) {
   .inv-total { font-size: 16px; }
 }
+@media (min-width: 768px) {
+  .inv-total { font-size: 17px; }
+}
 .inv-due { font-size: 10px; font-weight: 700; margin-top: 2px; letter-spacing: 0.5px; }
+@media (min-width: 768px) {
+  .inv-due { font-size: 11px; }
+}
 .inv-btns { display: flex; gap: 6px; flex-shrink: 0; }
+@media (min-width: 768px) {
+  .inv-btns { gap: 8px; }
+}
 
 /* ── Invoice editor – detail grid ──────────────────────── */
 .detail-grid-3 {
@@ -260,6 +336,9 @@ label.lbl {
 @media (min-width: 720px) {
   .detail-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 }
+@media (min-width: 768px) {
+  .detail-grid-3 { gap: 14px; margin-bottom: 16px; }
+}
 
 .detail-grid-2 {
   display: grid;
@@ -268,6 +347,9 @@ label.lbl {
 }
 @media (min-width: 540px) {
   .detail-grid-2 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 768px) {
+  .detail-grid-2 { gap: 14px; }
 }
 
 /* ── Section items grid ────────────────────────────────── */
@@ -284,6 +366,10 @@ label.lbl {
   }
   .item-row .inp { font-size: 12px; padding: 6px 6px; }
 }
+@media (min-width: 768px) {
+  .item-row { grid-template-columns: 1fr 70px 120px 36px; gap: 8px; margin-bottom: 8px; }
+  .item-row .inp { font-size: 14px; }
+}
 
 .item-header {
   display: grid;
@@ -293,6 +379,9 @@ label.lbl {
 }
 @media (max-width: 479px) {
   .item-header { grid-template-columns: 1fr 50px 85px 32px; }
+}
+@media (min-width: 768px) {
+  .item-header { grid-template-columns: 1fr 70px 120px 36px; gap: 8px; margin-bottom: 8px; }
 }
 
 /* ── Line items (individual) grid ──────────────────────── */
@@ -307,6 +396,10 @@ label.lbl {
   .line-row { grid-template-columns: 1fr 45px 80px 32px; }
   .line-row .inp { font-size: 12px; padding: 6px 6px; }
 }
+@media (min-width: 768px) {
+  .line-row { grid-template-columns: 1fr 70px 130px 36px; gap: 10px; margin-bottom: 10px; }
+  .line-row .inp { font-size: 14px; }
+}
 .line-header {
   display: grid;
   grid-template-columns: 1fr 55px 110px 32px;
@@ -315,6 +408,9 @@ label.lbl {
 }
 @media (max-width: 479px) {
   .line-header { grid-template-columns: 1fr 45px 80px 32px; }
+}
+@media (min-width: 768px) {
+  .line-header { grid-template-columns: 1fr 70px 130px 36px; gap: 10px; margin-bottom: 10px; }
 }
 
 /* ── Section total row ─────────────────────────────────── */
@@ -326,6 +422,9 @@ label.lbl {
 }
 .section-total-row .lbl { margin: 0; white-space: nowrap; }
 .section-total-row .inp { max-width: 160px; font-weight: 700; }
+@media (min-width: 768px) {
+  .section-total-row .inp { max-width: 180px; }
+}
 
 /* ── Grand total card ──────────────────────────────────── */
 .grand-total-card {
@@ -341,6 +440,9 @@ label.lbl {
 @media (min-width: 480px) {
   .grand-total-card { font-size: 18px; padding: 16px 24px; }
 }
+@media (min-width: 768px) {
+  .grand-total-card { font-size: 19px; padding: 18px 28px; margin-bottom: 18px; }
+}
 
 /* ── Preview – invoice document ────────────────────────── */
 .preview-wrapper {
@@ -350,6 +452,9 @@ label.lbl {
   border-radius: 4px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .preview-wrapper { max-width: 850px; }
 }
 
 .preview-header {
@@ -364,6 +469,9 @@ label.lbl {
 @media (min-width: 640px) {
   .preview-header { padding: 24px 36px; gap: 20px; }
 }
+@media (min-width: 768px) {
+  .preview-header { padding: 28px 40px; gap: 22px; }
+}
 
 .preview-company { flex: 1; min-width: 0; }
 .preview-company h1 {
@@ -373,8 +481,10 @@ label.lbl {
 }
 @media (min-width: 480px) { .preview-company h1 { font-size: 22px; } }
 @media (min-width: 640px) { .preview-company h1 { font-size: 26px; } }
+@media (min-width: 768px) { .preview-company h1 { font-size: 28px; } }
 
 .preview-company p { margin: 4px 0 0; font-size: 11px; opacity: 0.85; }
+@media (min-width: 768px) { .preview-company p { font-size: 12px; } }
 
 .preview-inv-num { text-align: right; flex-shrink: 0; }
 .preview-inv-label { font-size: 10px; opacity: 0.6; letter-spacing: 2px; text-transform: uppercase; }
@@ -384,7 +494,9 @@ label.lbl {
 }
 @media (min-width: 480px) { .preview-inv-no { font-size: 22px; } }
 @media (min-width: 640px) { .preview-inv-no { font-size: 24px; } }
+@media (min-width: 768px) { .preview-inv-no { font-size: 26px; } }
 .preview-inv-date { font-size: 12px; opacity: 0.8; margin-top: 4px; }
+@media (min-width: 768px) { .preview-inv-date { font-size: 13px; } }
 
 /* ── Invoice table header ──────────────────────────────── */
 .inv-table-head {
@@ -402,6 +514,9 @@ label.lbl {
 @media (min-width: 640px) {
   .inv-table-head { grid-template-columns: 1fr 70px 110px 110px; padding: 9px 36px; }
 }
+@media (min-width: 768px) {
+  .inv-table-head { grid-template-columns: 1fr 80px 120px 120px; padding: 10px 40px; font-size: 12px; }
+}
 
 /* ── Invoice table rows ────────────────────────────────── */
 .inv-table-row {
@@ -417,6 +532,9 @@ label.lbl {
 @media (min-width: 640px) {
   .inv-table-row { grid-template-columns: 1fr 70px 110px 110px; padding: 6px 36px; }
 }
+@media (min-width: 768px) {
+  .inv-table-row { grid-template-columns: 1fr 80px 120px 120px; padding: 8px 40px; font-size: 13px; }
+}
 
 .inv-section-head-row {
   padding: 8px 16px;
@@ -426,6 +544,7 @@ label.lbl {
 }
 @media (min-width: 480px) { .inv-section-head-row { padding: 8px 24px; font-size: 13px; } }
 @media (min-width: 640px) { .inv-section-head-row { padding: 8px 36px; } }
+@media (min-width: 768px) { .inv-section-head-row { padding: 10px 40px; font-size: 14px; } }
 
 .inv-subtotal-row {
   display: grid;
@@ -440,6 +559,9 @@ label.lbl {
 }
 @media (min-width: 640px) {
   .inv-subtotal-row { grid-template-columns: 1fr 70px 110px 110px; padding: 8px 36px; }
+}
+@media (min-width: 768px) {
+  .inv-subtotal-row { grid-template-columns: 1fr 80px 120px 120px; padding: 10px 40px; font-size: 14px; }
 }
 
 .inv-line-row {
@@ -456,6 +578,9 @@ label.lbl {
 @media (min-width: 640px) {
   .inv-line-row { grid-template-columns: 1fr 70px 110px 110px; padding: 8px 36px; }
 }
+@media (min-width: 768px) {
+  .inv-line-row { grid-template-columns: 1fr 80px 120px 120px; padding: 8px 40px; font-size: 13px; }
+}
 
 /* ── Grand total (preview) ─────────────────────────────── */
 .preview-totals {
@@ -466,7 +591,13 @@ label.lbl {
 @media (min-width: 640px) {
   .preview-totals { padding: 20px 36px 24px; }
 }
+@media (min-width: 768px) {
+  .preview-totals { padding: 24px 40px 28px; }
+}
 .preview-totals-inner { min-width: 220px; width: 100%; max-width: 320px; }
+@media (min-width: 768px) {
+  .preview-totals-inner { max-width: 360px; }
+}
 
 /* ── Preview bill-to strip ─────────────────────────────── */
 .preview-billto {
@@ -476,6 +607,9 @@ label.lbl {
 }
 @media (min-width: 640px) {
   .preview-billto { padding: 14px 36px; }
+}
+@media (min-width: 768px) {
+  .preview-billto { padding: 16px 40px; }
 }
 
 /* ── Preview notes ─────────────────────────────────────── */
@@ -488,6 +622,9 @@ label.lbl {
 @media (min-width: 640px) {
   .preview-notes { padding: 12px 36px; }
 }
+@media (min-width: 768px) {
+  .preview-notes { padding: 14px 40px; font-size: 13px; }
+}
 
 /* ── Preview top buttons ───────────────────────────────── */
 .preview-actions {
@@ -497,6 +634,9 @@ label.lbl {
   gap: 8px;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .preview-actions { max-width: 850px; margin-bottom: 14px; gap: 10px; }
 }
 .preview-right-btns { display: flex; gap: 8px; }
 
@@ -514,6 +654,11 @@ label.lbl {
   .logo-md { width: 58px; height: 58px; }
   .logo-lg { width: 70px; height: 70px; }
 }
+@media (min-width: 768px) {
+  .logo-sm { width: 56px; height: 56px; }
+  .logo-md { width: 64px; height: 64px; }
+  .logo-lg { width: 78px; height: 78px; }
+}
 
 /* ── Empty state ───────────────────────────────────────── */
 .empty-state {
@@ -522,6 +667,9 @@ label.lbl {
 }
 @media (min-width: 480px) {
   .empty-state { padding: 80px 20px; }
+}
+@media (min-width: 768px) {
+  .empty-state { padding: 100px 20px; }
 }
 
 /* ── Column header labels in editor ───────────────────── */

@@ -1204,27 +1204,25 @@ export default function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    (async () => {
-      try {
-        const inv = await window.storage.get("invoices");
-        if (inv) setInvoices(JSON.parse(inv.value));
-        const cfg = await window.storage.get("settings");
-        if (cfg) setSettings({ ...DEFAULT_SETTINGS, ...JSON.parse(cfg.value) });
-      } catch (_) {}
-      setLoaded(true);
-    })();
+    try {
+      const inv = localStorage.getItem("invoices");
+      if (inv) setInvoices(JSON.parse(inv));
+      const cfg = localStorage.getItem("settings");
+      if (cfg) setSettings({ ...DEFAULT_SETTINGS, ...JSON.parse(cfg) });
+    } catch (_) {}
+    setLoaded(true);
   }, []);
 
-  const persistInvoices = useCallback(async (data) => {
+  const persistInvoices = useCallback((data) => {
     try {
-      await window.storage.set("invoices", JSON.stringify(data));
+      localStorage.setItem("invoices", JSON.stringify(data));
     } catch (_) {}
   }, []);
 
-  const saveSettings = async (s) => {
+  const saveSettings = (s) => {
     setSettings(s);
     try {
-      await window.storage.set("settings", JSON.stringify(s));
+      localStorage.setItem("settings", JSON.stringify(s));
     } catch (_) {}
   };
 
